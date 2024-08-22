@@ -7,7 +7,10 @@
 
 def func(example):
     example.sort()
-    if (example[0] ** 2) + (example[1] ** 2) == example[2] ** 2:
+    # Добавлена проверка списка на длину     
+    if len(example) < 3 or len(example) > 3:               
+        return False
+    elif (example[0] ** 2) + (example[1] ** 2) == example[2] ** 2:
         return True
     else:
         return False
